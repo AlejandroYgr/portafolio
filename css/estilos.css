@@ -12,6 +12,7 @@ body{
 	margin: auto;
 /*	width: 95%;*/
 }
+
 .negro{
 	background-color: black;
 	display: flex;
@@ -21,11 +22,13 @@ body{
 	padding: 20px;
 	align-content: center;
 }
+
 .logo{
 		padding-right: 100px;
 		width: 50px;
 		height: 50px;
 }
+
 .lista{
 	display: flex;
 	justify-content: flex-end;
@@ -34,31 +37,37 @@ body{
 	width: 90%;
 	margin: auto
 }
+
 .flex{
 	display: flex;
     flex-wrap: wrap;
 	justify-content: space-between;
 	margin: auto;
 }
+
 .cajas{
 	margin-right: 45px;
 	text-align: center;
 }
+
 .caja{
 	list-style: none;
 	width: 100px;
 	margin-right: 45px;
 	font-weight: bold;
 }
+
 a{
 	text-decoration: none;
 	color: gray;
 }
+
 a:hover{
 	text-decoration: underline;
 	color: white;
 	font-weight: 1000;
 }
+
 header{
 /*imagen css*/
 	background-image:url(../imgs/pexels-pixabay-270348.jpg);
@@ -73,6 +82,7 @@ header{
 /*responsive*/
 	display: flex;
 }
+
 .gris{
 	background-color: gainsboro;
 	height: 500px;
@@ -83,6 +93,7 @@ header{
     flex-wrap: wrap;
 	justify-content: center;
 }
+
 .blanco{
 	height: 700px;
 	padding-top: 400px;
@@ -91,6 +102,7 @@ header{
 	margin: auto;
 	justify-content: center;
 }
+
 .blancos{
 	height: 500px;
 	padding: 20px;
@@ -117,6 +129,7 @@ h2{
 	margin-top: 50px;
 	margin-bottom: 50px;
 }
+
 .textito{
 	align-content: center;
 	justify-content: center;
@@ -128,6 +141,7 @@ h2{
 	border-left:solid gainsboro 2px;
 	color: black;
 }
+
 p{
 	align-content: center;
 	justify-content: center;
@@ -137,6 +151,7 @@ p{
 	margin: 10px 10px 20px 30px;
 	color: gray;
 }
+
 h5{
 	color: gray;
 	border: solid black 1px;
@@ -147,6 +162,7 @@ h5{
 	justify-content: center;
 	margin: auto;
 }
+
 .icono{
 	text-align: center;
 	align-content: center;
@@ -154,6 +170,7 @@ h5{
 	margin: auto;
 	margin-bottom: 20px;
 }
+
 .nav{
 	background-color: gainsboro;
 	display: flex;
@@ -165,9 +182,81 @@ h5{
 	width: 1500px;
 	margin: auto;
 }
+
 .iconos{
 	text-align: center;
 	align-content: center;
 	justify-content: center;
 	margin: 20px 50px 20px 50px;
+}
+
+.formulario {
+    background-color: var(--gris);
+    width: min (60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    color: var(--blanco);
+ 
+}
+
+
+@media (min-width: 789px ){
+ 
+    .contenedor-campos{
+      display:grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: auto auto;
+    
+    }
+ 
+    .formulario {
+      display: grid;
+      grid-column: auto;
+       grid-column-start: 1;
+      grid-column-end: 4;
+       max-width: 60rem;
+    }
+     
+    .campo {
+      border-radius: 0.5rem;
+       width: 90%;
+       border:none;
+      padding: 1.5rem;
+    }
+ 
+    .unacolumna .campo {
+     width: 201%;
+    }
+ 
+}
+ 
+.campo textarea{
+    margin-top: 0.9rem;
+    align-items: center;
+    height: 20rem;
+    border-radius: 0.5rem;
+    width: 90%;
+    border:none;
+    padding: 2rem;
+    resize: none;
+}
+
+.campo {
+    margin-bottom: 2rem;
+}
+
+.campo label{
+    
+    color: var(--blanco);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+input {
+    margin-top: 0.9rem;
+    border-radius: 0.5rem;
+    width: 90%;
+    border:none;
+    padding: 2rem;
 }
