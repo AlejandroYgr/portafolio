@@ -1,0 +1,18 @@
+{"proyectos": [
+    {
+        "nombre": "HTML", 
+        "descripcion": "Una de las paginas que he realizado en la asignatura LND del curso DAM.",
+        "imagen": "./imgs/cosahtmL.PNG",
+        "boton":"Freelancer",
+        "url":"./OtrosProyectos/Freelancer/Diseñador Freelancer.html"
+    },
+
+    {
+        "nombre": "Modelo 3D", 
+        "descripcion": "Modelos 3D que he realizado durante estos años de arduo trabajo.",
+        "imagen": "./imgs/camilla.png",
+        "boton":"Modelos",
+        "url":"./OtrosProyectos/Modelos.zip"
+    }
+]
+}

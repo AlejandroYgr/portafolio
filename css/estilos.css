@@ -12,8 +12,11 @@ body{
 	margin: auto;
 /*	width: 95%;*/
 }
+html{
+	scroll-behavior: smooth;
+}
 
-.negro{
+.barranav{
 	background-color: black;
 	display: flex;
     flex-wrap: wrap;
@@ -62,6 +65,18 @@ a{
 	color: gray;
 }
 
+.proyecto-hover:hover{
+	text-decoration: underline;
+	color: black;
+	font-weight: 1000;
+}
+
+.reload:hover{
+	text-decoration: underline;
+	color: rgb(44, 44, 179);
+	font-weight: 1000;
+}
+
 a:hover{
 	text-decoration: underline;
 	color: white;
@@ -83,18 +98,8 @@ header{
 	display: flex;
 }
 
-.gris{
-	background-color: gainsboro;
-	height: 500px;
-	padding: 20px;
-	align-content: center;
-	margin: auto;
-	display: flex;
-    flex-wrap: wrap;
-	justify-content: center;
-}
 
-.blanco{
+.descripcion{
 	height: 700px;
 	padding-top: 400px;
 	padding: 20px;
@@ -103,14 +108,58 @@ header{
 	justify-content: center;
 }
 
-.blancos{
-	height: 500px;
+.titupro{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.apartados{
+	display: grid;
+	width: 100%;
+	grid-template-columns:repeat(2, 1fr);
+	grid-template-rows:repeat(2, 1fr);
+	grid-template-areas: 
+	"html html"
+	"modelo modelo"
+	"js js"
+	;
+}
+
+.html{
+	background-color: gainsboro;
+	height: 100%;
 	padding: 20px;
 	align-content: center;
 	margin: auto;
 	display: flex;
     flex-wrap: wrap;
 	justify-content: center;
+	width: 100%;
+	grid-area: html;
+	scroll-behavior: smooth;
+}
+.modelo{
+	height: 100%;
+	padding: 20px;
+	align-content: center;
+	margin: auto;
+	display: flex;
+    flex-wrap: wrap;
+	justify-content: center;
+	grid-area: modelo;
+}
+
+.js{
+	background-color: gainsboro;
+	height: 100%;
+	padding: 20px;
+	align-content: center;
+	margin: auto;
+	display: flex;
+    flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+	grid-area: js;
 }
 
 h2{
@@ -137,7 +186,7 @@ h2{
 	width: 500px;
 	text-align: center;
 	line-height: 30px;
-	padding: 20px;
+	padding: 10px;
 	border-left:solid gainsboro 2px;
 	color: black;
 }
@@ -152,7 +201,7 @@ p{
 	color: gray;
 }
 
-h5{
+.boton{
 	color: gray;
 	border: solid black 1px;
 	width: 100px;
@@ -190,8 +239,11 @@ h5{
 	margin: 20px 50px 20px 50px;
 }
 
+
+
+
 .formulario {
-    background-color: var(--gris);
+    background-color: gainsboro;
     width: min (60rem, 100%);
     margin: 0 auto;
     padding: 2rem;
@@ -207,30 +259,31 @@ h5{
       display:grid;
       grid-template-columns: 50% 50%;
       grid-template-rows: auto auto;
-    
+
     }
  
     .formulario {
       display: grid;
       grid-column: auto;
-       grid-column-start: 1;
+	  grid-column-start: 1;
       grid-column-end: 4;
-       max-width: 60rem;
+	  max-width: 60rem;
     }
      
     .campo {
       border-radius: 0.5rem;
-       width: 90%;
-       border:none;
+	  width: 90%;
+	  border:none;
       padding: 1.5rem;
     }
  
     .unacolumna .campo {
      width: 201%;
     }
- 
+
+	
 }
- 
+
 .campo textarea{
     margin-top: 0.9rem;
     align-items: center;
@@ -258,3 +311,51 @@ input {
     border:none;
     padding: 2rem;
 }
+
+article{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.icono img {
+	transition: transform 0.3s ease-in-out;
+  }
+  
+  .icono img:hover {
+	transform: rotate(360deg);
+  }
+
+  .boton {
+	animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+	0% {
+	  transform: scale(1);
+	}
+	50% {
+	  transform: scale(1.1);
+	}
+	100% {
+	  transform: scale(1);
+	}
+  }
+
+  .apartados {
+	animation: slide-in 9s ease-out;
+  }
+  
+  @keyframes slide-in {
+	0% {
+	  transform: translateX(-100%);
+	}
+	100% {
+	  transform: translateX(0);
+	}
+  }
+ 
+  
+  
+  
+  

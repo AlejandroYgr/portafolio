@@ -1,20 +1,11 @@
 <!doctype html>
 <html>
     <head> 
-<!--el title aparece en la pestaña del navegador-->
         <title>Porfolio</title>
-        
-<!--Google indexa las páginas web por idiomas-->
         <meta lang="en">
-        
-<!--utf8 identifica todos los caracteres del mundo-->
         <meta charset="utf-8">
-        
-<!--escala las páginas para diferentes dispositivos-->
         <meta name="viewpoint" content="initial-scale=1.0">
-<!--descripcion-->
         <meta name="description" content="Porfolio">
-<!--palabras clave-->
         <meta name="keywords" content="Porfolio, yogur, portafolio, yogurt, lacteos, yo">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,90 +13,74 @@
 		<link rel="shortcut icon" type="image/x-icon" href="imgs/favicon.ico">
         <link href="css/estilos.css" rel="stylesheet" type="text/css">
     </head>
+
 <body>
-	<nav class="negro">
+	
+	<nav class="barranav">
        	<div class="logo"><h1><a href="index.html"><img src="imgs/yogur-grande.png" title="logo" alt="logo magic"></a></h1></div>
         <ul class="lista">
-			<li class="cajas"><a href="index.html">Sobre mi</a></li>
-			<li class="cajas"><a href="index.html">Proyectos</a></li>
-			<li class="cajas"><a href="index.html">Contacto</a></li>
+			<li class="cajas"><a href="#">Sobre mi</a></li>
+			<li class="cajas"><a href="#proyecto">Proyectos</a></li>
+			<li class="cajas"><a href="#contacto">Contacto</a></li>
 		</ul>
     </nav>
 	<header>
 <!--foto de cabezera-->
 	</header>
-	<section class="blanco">
-		<div class="icono"><img src="imgs/yogur-grande.png" title="logo" alt="logo yogur"></div>
-		<h2>Sobre mi...</h2>
-		<p class="textito">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, iure quas. Ab quod similique a molestiae inventore necessitatibus repellat odit. Vitae illum fuga sequi voluptatem eveniet exercitationem eius, minus laudantium.<br> <strong>Cum!</strong></p>
-		<h5>Alejandro Jumbo Moncada</h5>
-	</section>
-	<section class="gris">
-	<article><img src="imgs/cosahtml.PNG" title="html" alt="cosa html"></article>	
-	<article> 
-	<div class="icono"><img src="imgs/html.png" title="logo" alt="html logo"></div>
-	<h2>HTML</h2>
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quam, earum repellat laudantium non deleniti doloribus placeat ipsam fuga, et asperiores. Tempore aspernatur hic exercitationem aut molestias excepturi, esse sapiente?</p>
-	<a href="Freelancer/Diseñador Freelancer.html"><h5>Freelancer</h5></a>
-	</article>
-	</section>	
-	<section class="blancos">
-	<article> 
-	<div class="icono"><img src="imgs/cubo.png" title="logo" alt="cubo logo"></div>
-	<h2>Modelado 3D</h2>
-	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus aliquam cumque esse autem numquam fuga dolorum ullam optio earum sint unde nam sit est cum, deleniti voluptas, voluptate non reprehenderit!</p>
-	<h5>Alejandro Jumbo Moncada</h5>
-	</article>
-	<article><img src="imgs/camilla.png" title="camilla" alt="camilla"></article>
-	</section>	
-	<section class="gris">
-	<article> 
-	<h2>Idiomas</h2>
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias doloribus illo itaque, incidunt dicta perferendis deserunt tenetur error architecto alias excepturi repellendus nisi debitis ad adipisci enim illum dignissimos repudiandae!</p>
-	<h5>Alejandro Jumbo Moncada</h5>
-	</article>
-	<article><img src="imgs/idiomas" title="mundo" alt="mundo mundo"></article>
-	</section>
-
-	<div class="formulario">
-		<h3>Contactame</h3>
-		<form autocomplete >
+	
+	<div class="contenido">
+		<section class="descripcion">
+			<div class="icono"><img src="imgs/yogur-grande.png" title="logo" alt="logo yogur"></div>
+			<h2>Sobre mi...</h2>
+			<p class="textito">Hey, soy Alejandro, informatico, estudiante de DAM (Desarrollo de aplicaciones multiplataformas) y con experiencia laboral en la empresa de <a href="http://reloadgroupcanarias.com/" class="reload">RELOAD</a>, como modelador 3D de por ejemplo una habitación de hospital y una ambulancia por dentro.</p>
+		</section>
+		<div id="proyecto">
+			<h1 class="titupro">Proyectos</h1>
+			<div class="proyectos">
+				<div class="apartados" id="proyectosContainer"></div>
+			</div>
 			
-			<div class="contenedor-campos">
+			<script src="./script.js"></script>
+		</div>
+		<div class="formulario" id="contacto">
+			<h3>Contactame</h3>
+			<form autocomplete="off" >
 				
-				<div class="campo">
-					<label for="nombre">Nombre</label>
-					<input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
-						
-				</div>
-
-				<div class="campo">
-					<label for="telefono">Teléfono</label>
-					<input type="tel" pattern="[0-9]{9}" id="telefono" name="telefono" placeholder="Tu teléfono">
-				</div>
-
-				<div class="unacolumna">
-
+				<div class="contenedor-campos">
+					
 					<div class="campo">
-						<label for="telefono">Correo</label>
-						<input type="email" id="correo" name="correo" placeholder="Tu correo">
+						<label for="nombre">Nombre</label>
+						<input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+							
 					</div>
 
 					<div class="campo">
-						<label for="mensaje">Mensaje</label>
-						<textarea></textarea>
+						<label for="telefono">Teléfono</label>
+						<input type="tel" pattern="[0-9]{9}" id="telefono" name="telefono" placeholder="Tu teléfono">
+					</div>
+					
+					<div class="unacolumna">
+
+						<div class="campo">
+							<label for="telefono">Correo</label>
+							<input type="email" id="correo" name="correo" placeholder="Tu correo">
+						</div>
+
+						<div class="campo">
+							<label for="mensaje">Mensaje</label>
+							<textarea></textarea>
+						</div>
+
 					</div>
 
 				</div>
 
-			</div>
-
-			<div class="iconos center">
-				<a class="boton" href="#">Enviar</a>
-			</div>
-		</form>
-
-	</div>
+				<div class="iconos center">
+					<button type="submit" class="boton">Enviar</button>
+				</div>
+			</form>
+			<script src="./formulario.js"></script>
+		</div>
 
 	<footer>
 		<section class="iconos">
@@ -124,14 +99,6 @@
 				<line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
 			</svg></a>
 		</section>
-	<nav class="nav">
-	 	<ul class="flex">
-			<li class="caja"><a href="index.html">Sobre mi</a></li>
-			<li class="caja"><a href="index.html">Proyectos</a></li>
-			<li class="caja"><a href="index.html">Contacto</a></li>
-		</ul>
-	</nav>
-		
 	</footer>
 </body>
 </html>
